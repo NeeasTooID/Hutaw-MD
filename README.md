@@ -69,6 +69,7 @@ npm start
 [![ImYanXiao](https://github.com/ImYanXiao.png?size=100)](https://github.com/ImYanXiao)
 [![Xnuvers007](https://github.com/Xnuvers007.png?size=100)](https://github.com/Xnuvers007)
 [![ShirokamiRyzen](https://github.com/ShirokamiRyzen.png?size=100)](https://github.com/ShirokamiRyzen)
+[![Fau-Zan](https://github.com/Fau-Zan.png?size=100)](https://github.com/Fau-Zan)
 #### Contributor
 [![NeastooID](https://github.com/NeastooID.png?size=100)](https://github.com/NeastooID)
 [![HindiaFtNpc](https://github.com/HindiaFtNpc.png?size=100)](https://github.com/HindiaFtNpc)
