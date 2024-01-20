@@ -100,10 +100,10 @@ const rl = readline.createInterface({ input: process.stdin, output: process.stdo
 
 const store = useStore ? makeInMemoryStore({ level: 'silent' }) : undefined
 
-store?.readFromFile('./elaina_store.json')
+store?.readFromFile('./hutawirstore.json')
 // save every 10s
 setInterval(() => {
-	store?.writeToFile('./elaina_store.json')
+	store?.writeToFile('./hutawirstore.json')
 }, 10_000)
 
 const { version, isLatest} = await fetchLatestBaileysVersion()
