@@ -4,7 +4,7 @@
   "description": "ya ndak tau",
   "main": "start.js",
   "dependencies": {
-    "@adiwajshing/baileys": "github:adiwajshing/baileys",
+    "@adiwajshing/baileys": "npm:@whiskeysockets/baileys@*",
     "awesome-phonenumber": "^2.48.0",
     "brainly-scraper": "^1.0.3",
     "browser-id3-writer": "^4.4.0",

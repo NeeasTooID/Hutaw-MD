@@ -9,7 +9,7 @@ m.message = (Object.keys(m.message)[0]=== 'ephemeralMessage') ? m.message.epheme
 try {
 const mess = Object.keys(m.message)[0];
 prefix = userbot['prefix'];
-require('../Lib/simple')['smsg'](this, m);
+require('../lib/simple.js')['smsg'](this, m);
 let body = (mess === 'conversation' && m.text.startsWith(prefix)) ? m.text : (mess == 'imageMessage') && m.message.imageMessage.caption.startsWith(prefix) ? m.message.imageMessage.caption : (mess == 'videoMessage') && m.message.videoMessage.caption.startsWith(prefix) ? m.message.videoMessage.caption : (mess == 'extendedTextMessage') && m.message.extendedTextMessage.text.startsWith(prefix) ? m.message.extendedTextMessage.text : ""
 let message = (mess === 'conversation') ? m.message.conversation : (mess === 'extendedTextMessage') ? m.message.extendedTextMessage.text : ''
 if (message.startsWith(prefix)) console.log(Ft['color']('\x1b[1;37m>', 'cyan'), Ft['color']('[CMD]'), Ft['color'](Ft['moment'].tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm'), 'cyan'), Ft['color']('Command', 'cyan'), 'Dari', Ft['color'](await this.getName(m.sender)));

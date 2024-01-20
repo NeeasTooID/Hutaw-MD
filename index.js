@@ -1,10 +1,9 @@
-"use strict";
 const fs = require("fs")
 const qrcode = require("qrcode")
 const Baileys = "@adiwajshing/baileys";
 const { WAConnection: _WAConnection } = require("@adiwajshing/baileys");
-const WAConnection = require('./Lib/simple').WAConnection(_WAConnection);
-const { Functions } = require('./Lib/Functions');
+const WAConnection = require('./lib/simple').WAConnection(_WAConnection);
+const { Functions } = require('./lib/Functions');
 const { JsonDB } =  require("node-json-db")
 const { Config } = require('node-json-db/dist/lib/JsonDBConfig')
   
@@ -19,7 +18,7 @@ global.antidelete = false
              global.baileys = Baileys //Hehe
                global.db = new JsonDB(new Config("database", true, false, '/'));
                 global.Public = false
-                  global.Scrap = require("./Lib/scrape")
+                  global.Scrap = require("./lib/scrape")
  
  
 console.log(Ft.banner.string)
