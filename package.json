@@ -1,8 +1,8 @@
 {
-  "name": "selp",
+  "name": "Hutawir-MD",
   "version": "1.0.0",
   "description": "ya ndak tau",
-  "main": "start.js",
+  "main": "index.js",
   "dependencies": {
     "@adiwajshing/baileys": "npm:@whiskeysockets/baileys@*",
     "awesome-phonenumber": "^2.48.0",
