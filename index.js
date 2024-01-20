@@ -1,55 +1,64 @@
-const fs = require("fs")
-const qrcode = require("qrcode")
-const Baileys = "@adiwajshing/baileys";
-const { WAConnection: _WAConnection } = require("@adiwajshing/baileys");
-const WAConnection = require('./lib/simple').WAConnection(_WAConnection);
-const { Functions } = require('./lib/Functions');
-const { JsonDB } =  require("node-json-db")
-const { Config } = require('node-json-db/dist/lib/JsonDBConfig')
-  
+console.log('🐾 Starting...')
 
-global.antidelete = false
-  global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
-    global.Ft = new Functions();// Menghubungkan dari Function.js
-      global.mediaType = require(Baileys).MessageType //Biar keren hehe
-        global.conn = new WAConnection(); //Wa Connect dari baileys
-          global.botuser = require('./config')//Menghubungkan Ke Conection string
-            global.Events = {}
-             global.baileys = Baileys //Hehe
-               global.db = new JsonDB(new Config("database", true, false, '/'));
-                global.Public = false
-                  global.Scrap = require("./lib/scrape")
- 
- 
-console.log(Ft.banner.string)
-conn.version = [2, 2119, 6]
-conn.logger.level = "warn"
+import yargs from 'yargs'
+import cfonts from 'cfonts'
+import { fileURLToPath } from 'url'
+import { join, dirname } from 'path'
+import { createRequire } from 'module'
+import { createInterface } from 'readline'
+import { setupMaster, fork } from 'cluster'
+import { watchFile, unwatchFile } from 'fs'
 
-if (fs.existsSync('./session.json')) conn.loadAuthInfo('./session.json')
-   conn.on('qr', qr => {
-   console.log(`scan qr nya ngab`)
-})
-conn.on('connecting', () => {
-   console.log(`connecting....!`)
- 
-})
+// https://stackoverflow.com/a/50052194
+const { say } = cfonts
+const rl = createInterface(process.stdin, process.stdout)
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const require = createRequire(__dirname) // Bring in the ability to create the 'require' method
+const { name, author } = require(join(__dirname, './package.json')) // https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
 
-conn.on("open", () => {
-const authInfo = conn.base64EncodedAuthInfo()
-console.log("Succes connet to baileys")
-fs.writeFileSync('./session.json', JSON.stringify(authInfo, null, '\t'))
-})
+say('Lightweight\nWhatsApp Bot', { font: 'chrome', align: 'center', gradient: ['red', 'magenta'] })
+say(`'${name}' By @${author.name || author}`, { font: 'console', align: 'center', gradient: ['red', 'magenta'] })
 
+var isRunning = false
+/**
+ * Start a js file
+ * @param {String} file `path/to/file`
+ */
+function start(file) {
+  if (isRunning) return
+  isRunning = true
+  let args = [join(__dirname, file), ...process.argv.slice(2)]
+  say([process.argv[0], ...args].join(' '), { font: 'console', align: 'center', gradient: ['red', 'magenta'] })
+  setupMaster({ exec: args[0], args: args.slice(1) })
+  let p = fork()
+  p.on('message', data => {
+    console.log('[✅RECEIVED]', data)
+    switch (data) {
+      case 'reset':
+        p.process.kill()
+        isRunning = false
+        start.apply(this, arguments)
+        break
+      case 'uptime':
+        p.send(process.uptime())
+        break
+    }
+  })
+  p.on('exit', (_, code) => {
+    isRunning = false
+    console.error('[❗]Exited with code:', code)
+    if (code !== 0) return start(file)
+    watchFile(args[0], () => {
+      unwatchFile(args[0])
+      start(file)
+    })
+  })
+  let opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
+  if (!opts['test'])
+    if (!rl.listenerCount()) rl.on('line', line => {
+      p.emit('message', line.trim())
+    })
+  // console.log(p)
+}
 
- require('./src/loader')
- async function run() {// Function biar bisa run bot
- let message = require('./action/chats');
- let action = require('./action/action');
-await conn.connect();
- conn.message = message.msg
- conn.on('chat-update', conn.message);
- conn.on('group-participants-update', action.groupUpdate);
- }
- Ft.action()
- run();// Menjalangkan Bot
-
+start('main.js')
