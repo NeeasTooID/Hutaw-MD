@@ -1,14 +1,14 @@
 userbot = {
  owner: [
-  "6282298069899", 
-  "62822980698995"
+  "6283895099347", 
+  "6283897390164"
   ],
-  MONGO_URI: "mongodb+srv://zanDb:veth0581@cluster0.eyx0e.mongodb.net/<mydb>?retryWrites=true&w=majority",
+  MONGO_URI: " - ",
    mess: {
    wait: "tunggu sedang di proses...",
    error: "errorr!!"
    },
-   prefix: ["#"],
+   prefix: ["/"],
     setting: {
     admin: "only admin",
     group: "only group",
