@@ -112,7 +112,7 @@ const connectionOptions = {
         version,
         logger: pino({ level: 'silent' }), 
         printQRInTerminal: !usePairingCode, 
-        browser: ['Mac OS', 'safari', '5.1.10'],
+        browser: ['HutawMD', 'safari', '5.1.10'],
         auth: { 
          creds: state.creds, 
          keys: makeCacheableSignalKeyStore(state.keys, pino().child({ 
@@ -177,17 +177,6 @@ if (!opts['test']) {
       clearTmp()
   //  } catch (e) { console.error(e) }
   }, 60 * 1000)
-}
-
-function clearTmp() {
-  const tmp = [tmpdir(), join(__dirname, './tmp')]
-  const filename = []
-  tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
-  return filename.map(file => {
-    const stats = statSync(file)
-    if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
-    return false
-  })
 }
 
 function clearSessions(folder = 'sessions') {
