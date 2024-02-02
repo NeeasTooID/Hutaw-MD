@@ -40,15 +40,4 @@
     "syntax-error": "^1.4.0",
     "yt-search": "^2.10.1",
     "zrapi": "^0.0.6"
-  },
-  "scripts": {
-    "test": "/menu"
-  },
-  "keywords": [
-    "oh",
-    "ndak",
-    "tau"
-  ],
-  "author": "fauzan ganz",
-  "license": "ISC"
-}
+  }
