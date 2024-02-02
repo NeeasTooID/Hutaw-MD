@@ -24,36 +24,7 @@
 - ✔️ | **Plugins** 
 - ✔️ | **99% Scrape Feature** 
 ---------
-### Some of the features include
-- ✔️ | Menfess
-- ✔️ | AntiCall
-- ✔️ | Welcome & Leave
-- ✔️ | AI Feature (ChatGPT/DALL-E/MidJourney/To Anime)
-- ✔️ | Sticker 
-- ✔️ | Downloader 
-- ✔️ | Quotes
-- ✔️ | Anime 
-- ✔️ | Premium 
-- ✔️ | Tools 
----------
 
-## FOR WINDOWS/VPS/RDP USER 💻
-
-* Download And Install Git [`Click Here`](https://git-scm.com/downloads)
-* Download And Install NodeJS [`Click Here`](https://nodejs.org/en/download)
-* Download And Install FFmpeg [`Click Here`](https://ffmpeg.org/download.html) (**Don't Forget Add FFmpeg to PATH enviroment variables**)
-* Download And Install ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
-
-```bash
-git https://github.com/NpnpicyAvailable/Hutawir-MD.git
-cd Hutawir-MD
-npm install
-npm start
-```
-
----------
-
-#
 ### 📮 S&K
 1. Jangan diperjual belikan Script ini
 2. Sebelum pakai jangan lupa kasih star
@@ -68,7 +39,7 @@ npm start
 [![BochilGaming](https://github.com/BochilGaming.png?size=100)](https://github.com/BochilGaming)
 [![Fau-Zan](https://github.com/Fau-Zan.png?size=100)](https://github.com/Fau-Zan)
 
-#### Recode
+### Recode
 [![NeastooID](https://github.com/NeastooID.png?size=100)](https://github.com/NeastooID)
 [![HindiaFtNpc](https://github.com/HindiaFtNpc.png?size=100)](https://github.com/HindiaFtNpc)
 [![NeastooID](https://github.com/NeeasTooID.png?size=100)](https://github.com/NeeasTooID)
