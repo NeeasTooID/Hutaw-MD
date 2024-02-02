@@ -5,7 +5,7 @@
 
 </p>
 <p align="center">
-<a href="https://github.com/NpnpicyAvailable"><img title="Author" src="https://img.shields.io/badge/AUTHOR-NpnpicyAvailable-green.svg?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/NeeasTooID"><img title="Author" src="https://img.shields.io/badge/AUTHOR-NeeasTooID-green.svg?style=for-the-badge&logo=github"></a>
     
 ## NOTE BEFORE USING!!
 - Edit all Owner Information on config.js
