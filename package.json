@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "ya ndak tau",
   "main": "index.js",
+  "homepage": "https://github.com/NeeasTooID/Hutaw-MD",
+    "author": {
+        "name": "YusupKakuu"
+    },
   "dependencies": {
     "@adiwajshing/baileys": "npm:@whiskeysockets/baileys@*"
   }
