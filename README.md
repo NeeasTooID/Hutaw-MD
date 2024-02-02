@@ -62,17 +62,13 @@ npm start
 
 ---------
 
-### Thanks To
+### Thanks To ( Source Code and Source of Ideas )
 [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo)
 [![WhiskeySockets](https://github.com/WhiskeySockets.png?size=100)](https://github.com/WhiskeySockets/Baileys)
 [![BochilGaming](https://github.com/BochilGaming.png?size=100)](https://github.com/BochilGaming)
-[![ImYanXiao](https://github.com/ImYanXiao.png?size=100)](https://github.com/ImYanXiao)
-[![Xnuvers007](https://github.com/Xnuvers007.png?size=100)](https://github.com/Xnuvers007)
-[![ShirokamiRyzen](https://github.com/ShirokamiRyzen.png?size=100)](https://github.com/ShirokamiRyzen)
 [![Fau-Zan](https://github.com/Fau-Zan.png?size=100)](https://github.com/Fau-Zan)
-#### Contributor
+
+#### Recode
 [![NeastooID](https://github.com/NeastooID.png?size=100)](https://github.com/NeastooID)
 [![HindiaFtNpc](https://github.com/HindiaFtNpc.png?size=100)](https://github.com/HindiaFtNpc)
 [![NeastooID](https://github.com/NeeasTooID.png?size=100)](https://github.com/NeeasTooID)
-
----------
